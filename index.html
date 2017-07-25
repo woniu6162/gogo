@@ -43,8 +43,46 @@
             </div>
         </div>
     </header>
+    <section>
+        <nav>
+            <ul class="main_nav_container"> </ul>
+        </nav>
+    </section>
+
+    <!-- <div id="test">aaaa</div> -->
 </body>
+<script src="js/navigation.js"></script>
 <script src="js/login.js"></script>
 <script src="js/index.js"></script>
+<!-- <script>
+    var dom = document.querySelector("#test");
+
+    function click(ele, parm, fun) {
+        dom.onclick = function(event) {
+            event.tttttt = "1234567";
+            console.log(event);
+        }
+    };
+    click(dom, {
+        name: "111"
+    }, function(event) {
+        console.log(event);
+    });
+
+    function DOM(selector) {
+        this.dom = document.querySelector(selector);
+    }
+    DOM.prototype.click = function(type, parm, fun) {
+        this.dom.addEventListener(type, function(event) {
+            event.data = parm;
+            fun(event);
+        });
+    };
+    new DOM("#test").click("click", {
+        name: "111"
+    }, function(event) {
+        console.log(event);
+    }); 
+</script>-->
 
 </html>

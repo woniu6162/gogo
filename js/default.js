@@ -6,3 +6,6 @@ DEBUG_HOST = "192.168.200.33:8080/shop/";
 
 // 登录
 LOGIN = "api_user.php";
+
+// 获取商品分类
+PRODUCT_TYPE = "api_cat.php";

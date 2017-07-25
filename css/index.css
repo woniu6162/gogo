@@ -1,0 +1,15 @@
+#main_course_container,
+.goods_container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#main_course_container div {
+    float: left;
+}
+
+#main_course_container:after {
+    content: "";
+    display: block;
+    clear: both;
+}

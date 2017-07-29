@@ -1,7 +1,7 @@
 (function() {
     function GoodsItem(obj) {
-        this.des = obj;
-
+        // this.des = obj;
+        this.goodsId = obj.goods_id;
         var space = 20;
         var colume = 5;
         var width = (1200 - space * (colume - 1)) / colume;
@@ -40,8 +40,17 @@
     }
 
 
+    // GoodsItem.prototype.click = function(callback) {
+    //     this.item.on("click", callback);
+    //     return this;
+    // };
+
+
     GoodsItem.prototype.click = function(callback) {
-        this.item.on("click", this, callback);
+        // var that = this;
+        this.item.click(function() {
+            window.open("product_details.html?name=" + this.goodsId);
+        }.bind(this));
         return this;
     };
 
@@ -59,7 +68,7 @@
 
     Goods.prototype.showGoodsView = function(goods, superView, action) {
         goods.forEach(function(data) {
-            superView.append(new GoodsItem(data).click(action).item)
+            superView.append(new GoodsItem(data).click(action).item);
         });
     }
 

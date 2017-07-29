@@ -10,9 +10,8 @@
     <link rel="stylesheet" href="css/universal.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/footer.css">
-    <title>go购</title>
-    <script src="js/default.js"></script>
-    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/details.css">
+    <title>商品详情</title>
 </head>
 
 <body>
@@ -45,20 +44,17 @@
             </div>
         </div>
     </header>
-    <section>
+    <section class="boxdiv">
         <nav>
             <ul class="main_nav_container"> </ul>
         </nav>
-        <div id="main_course_container">
-            <div id="left_course"></div>
-            <div id="center_course"></div>
-            <div id="right_course"></div>
-        </div>
-        <div class="main_goods_list">
-            <div class="goods_container">
-
+        <div class="main">
+            <div class="mainHeader">
+                <p>商品详情</p>
             </div>
+            <div class="mainBody"></div>
         </div>
+        <!-- <div class="divbox"></div> -->
     </section>
     <footer>
         <div class="whole">
@@ -108,45 +104,14 @@
             <p>增值电信业务经营许可证：浙B2-20080224</p>
         </div>
     </footer>
-
-    <!-- <div id="test">aaaa</div> -->
 </body>
+<script src="js/default.js"></script>
+<script src="js/jquery.js"></script>
 <script src="js/Course.js"></script>
 <script src="js/navigation.js"></script>
 <script src="js/login.js"></script>
-<script src="js/goods.js"></script>
 <script src="js/share_nav.js"></script>
-<script src="js/index.js"></script>
+<script src="js/details.js"></script>
 
-<!-- <script>
-    var dom = document.querySelector("#test");
-
-    function click(ele, parm, fun) {
-        dom.onclick = function(event) {
-            event.tttttt = "1234567";
-            console.log(event);
-        }
-    };
-    click(dom, {
-        name: "111"
-    }, function(event) {
-        console.log(event);
-    });
-
-    function DOM(selector) {
-        this.dom = document.querySelector(selector);
-    }
-    DOM.prototype.click = function(type, parm, fun) {
-        this.dom.addEventListener(type, function(event) {
-            event.data = parm;
-            fun(event);
-        });
-    };
-    new DOM("#test").click("click", {
-        name: "111"
-    }, function(event) {
-        console.log(event);
-    }); 
-</script>-->
 
 </html>

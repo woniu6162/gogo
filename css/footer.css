@@ -1,0 +1,53 @@
+footer {
+    clear: both;
+    background: #444;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.whole {
+    clear: both;
+    width: 1200px;
+    height: 300px;
+    margin: 0 auto;
+    padding: 20px 100px;
+    box-sizing: border-box;
+    color: white;
+}
+
+.whole div {
+    float: left;
+    font-size: 18px;
+    margin-left: 60px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.whole li {
+    margin-top: 15px;
+}
+
+.whole h2 {
+    font-size: 28px;
+}
+
+.whole h3 {
+    font-size: 22px;
+}
+
+.whole .pic {
+    margin-top: 10px;
+}
+
+.whole .pic img {
+    display: inline-block;
+    width: 150px;
+    margin-top: -20px;
+    margin-right: 55px;
+}
+
+footer .bottom {
+    text-align: center;
+    font-size: 18px;
+    color: #99998E;
+}

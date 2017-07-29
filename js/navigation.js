@@ -1,9 +1,12 @@
+//noConflict()方法为jQuery对象规定新的名称，此处预防与其他库冲突
 var $ = jQuery.noConflict();
+// 匿名函数自调用，防止污染
 (function() {
     //显示在导航上面的每一个按钮
     function NavigaterItem(obj) {
-
+        // 有obj时为其赋值obj自身，没有值时赋值一个空的对象｛｝，预防报错
         var obj = obj || {};
+        // 
         this.name = obj.cat_name;
         this.id = obj.cat_id;
         this.item = $("<li>" + this.name + "</li>");
@@ -43,8 +46,7 @@ var $ = jQuery.noConflict();
                     // 创建导航列表
                     superView.append(new NavigaterItem(obj).itemClick(callback).item);
                 });
-                // console.log(new NavigaterItem(obj).itemClick(callback).item)    
-
+                // console.log(new NavigaterItem(obj).itemClick(callback).item)
             }
         });
         return this;

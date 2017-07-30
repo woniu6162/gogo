@@ -5,8 +5,7 @@ var goodsId = params[1];
 // document.body.append(picContainer)
 var mainBody = $(".mainBody")
 
-var url = "http://h6.duchengjiu.top/shop/api_goods.php"
-$.get(url, { goods_id: goodsId }, function(result) {
+$.get(PRODUCT_HOST + GOODS, { goods_id: goodsId }, function(result) {
     var datas = result.data[0];
     console.log(datas);
     var imgContainer = $("<div><img src='" + datas.goods_thumb + "'/></div>");
@@ -15,6 +14,7 @@ $.get(url, { goods_id: goodsId }, function(result) {
     var num = 1;
     mainBody.append(imgContainer);
     mainBody.append(info);
+
     $(".numMinus").click(function() {
         num <= 1 ? 1 : num--;
         $(".goodsNum").val(num);
@@ -24,6 +24,15 @@ $.get(url, { goods_id: goodsId }, function(result) {
         num++
         $(".goodsNum").val(num);
     });
+
+    var cartUrl = "http://h6.duchengjiu.top/shop/api_cart.php?token=" + localStorage.getItem("token");
+    var cartParam = { goods_id: goodsId, number: num }
+    $(".addCart").click(function() {
+        $.post(cartUrl, cartParam, function(result) {
+            console.log(result.data)
+        });
+    });
+
 });
 
-console.log($(".addCart"));
+console.log();

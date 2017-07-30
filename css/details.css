@@ -1,27 +1,5 @@
-.main .mainHeader {
-    height: 100px;
-    background: url("../resource/image/header/TB1adb0OFXXXXXzapXXXXXXXXXX-245-81.png") no-repeat center;
-}
-
-.mainHeader p {
-    text-align: center;
-    line-height: 100px;
-    font-size: 30px;
-    font-weight: bold;
-    color: red;
-}
-
-.mainBody {
-    height: 500px;
-    width: 1200px;
-    margin: 15px auto;
-    border-top: 3px solid red;
-    border-bottom: 3px solid red;
-}
-
 .mainBody>div {
     float: left;
-    margin-top: 30px;
     border: 2px solid red;
     box-sizing: border-box;
 }
